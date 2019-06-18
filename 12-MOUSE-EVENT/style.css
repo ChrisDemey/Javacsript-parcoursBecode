@@ -1,0 +1,23 @@
+.hoverMe{
+    background-color: blue;
+    margin: 30px;
+    padding: 15px;
+    width: 160px;
+}
+
+.reset{
+    background-color: greenyellow;
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 20px;
+}
+.reset:hover{
+    cursor: pointer;
+}
+
+#axe-x, #axe-y{
+    background-color: orange;
+    width: 250px;
+}

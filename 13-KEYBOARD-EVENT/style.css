@@ -1,0 +1,23 @@
+.character{
+    border-radius: 50px;
+    width: 150px;
+    border: 5px inset black;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    margin: 50px;
+}
+
+.highlight{
+    opacity: 0;
+}
+
+#up, #down, #right, #left{
+    border-radius: 50px;
+    width: 80px;
+    border: 5px inset orange;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    margin: 10px;
+}
