@@ -1,6 +1,6 @@
 //05-arrays/04-walk-two/script.js - 5.4: parcours de tableau (2)
 
-let go = document.getElementById("run");
+let list = document.getElementById("run");
 const fruits = [
     "pomme",
     "poire",
@@ -15,7 +15,7 @@ const fruits = [
     "raisin",
     "cerise",
 ];
-go.addEventListener("click", function(el) {
+list.addEventListener("click", function(el) {
 fruits.forEach(element => {
     console.log(element)})
     

@@ -1,36 +1,24 @@
 const performOperation = operation => {
 
-    let un = document.getElementById("op-one").value;
-    let deux = document.getElementById("op-two").value;
+    let one = document.getElementById("op-one").value;
+    let two = document.getElementById("op-two").value;
 
     switch (operation) {
-
         case "addition":
-
-            alert(parseInt(un) + parseInt(deux));
+            alert(parseInt(one) + parseInt(two));
             break;
-
         case "substraction":
-
-            alert(parseInt(un) - parseInt(deux));
+            alert(parseInt(one) - parseInt(two));
             break;
-
         case "multiplication":
-
-            alert(parseInt(un) * parseInt(deux));
+            alert(parseInt(one) * parseInt(two));
             break;
-
         case "division":
-
-            alert(parseInt(un) / parseInt(deux));
+            alert(parseInt(one) / parseInt(two));
             break;
-
     }
 };
 
 Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
-$btn.addEventListener(
-    "click",
-    () => (performOperation($btn.id), false),
-),
+    $btn.addEventListener("click", () => (performOperation($btn.id), false),),
 );

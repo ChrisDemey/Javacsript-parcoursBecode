@@ -1,14 +1,20 @@
 // 08-dom/12-change-event-input-two/script.js - 8.12: événement change (2)
 
-let input = document.querySelector("#pass-one").addEventListener("keypress", () => {
-    let select = document.querySelector("input");
-    let minlength = select.setAttribute("minlength", 8);
-    let inputValue = document.querySelector("#pass-one").value;
-    let input = inputValue.length;
-    let validator = document.getElementById("validity");
-    if (!isNaN(inputValue.length >= 2)) {
-        if (inputValue.length >= 7) {
-            validator.innerText = "ok"
-        }
+///// Pas encore au point mais je veux y arriver par moi-même (au moins celui-là) /////
+
+const password = document.getElementById("pass-one");   // chercher l'ID pass-one
+const count = document.getElementById("counter");       // chercher l'ID counter
+const numbers = document.getElementById("counter");
+let entry = "";                                         // variable vide (pour la chaine de caractères)
+
+password.addEventListener("keypress", (event) => {      // ajouter évènement a password avec une interface event
+    passLength = password.value.length;                 // variable length vaut la longueur des valeurs de password
+    minNumbers  = count.value;                          // variable minNumbers vaut la valeur de count
+    if (passLength >= 8 && minNumbers == 2) {           // SI la longueur vaut 8 caractères et 2 chiffres
+        event.preventDefault();                         // appeler méthode preventDefault, en gros ca stop la prise de nouveaux caractères
+        count.innerText = `Ok`;                         // count change le html pour marquer Ok
+    }
+    else{
+        count.innerText = `Pas Ok`;                     // SINON count change le html et marque Pas ok
     }
 })

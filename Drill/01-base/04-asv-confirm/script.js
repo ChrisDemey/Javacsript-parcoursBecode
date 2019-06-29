@@ -11,12 +11,15 @@
 
 function questions() {
     let age = prompt(`Quel est votre âge?`);
-    let sexe = prompt(`Êtes-vous un homme ou une femme?`);
+    let gender = prompt(`Êtes-vous un homme ou une femme?`);
     let city = prompt(`quelle est votre ville?`);
-    alert(age + ` ans, ` + sexe + `, habite à ` + city);
-let message = prompt(`Confirmez-vous ces informations?`);
-if (message == `oui`) {
-    alert(`Parfait!`)
-} else {
-    alert(`One recommence`)
+
+    let infoConfirm = confirm('Ces infos (' + age + ' ans, ' + gender + ', ' + 'habite à ' + city + ') sont-elles correctes ?');
+    if (infoConfirm) {
+        alert('Vous avez ' + age + ' ans, vous êtes un(e) ' + gender + ', et vous habitez à ' + city);
+    } 
+    else {
+        questions();
+    }
 }
+questions();

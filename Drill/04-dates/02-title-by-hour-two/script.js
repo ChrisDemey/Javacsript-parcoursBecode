@@ -5,14 +5,16 @@ let doc = document.querySelector("target")
 
 function heure() {
     let date = new Date();
-    let heure = date.getHours();
+    let hours = date.getHours();
     let minutes = date.getMinutes();
-    if (heure < 17) {
+    if (hours < 17) {
         target.innerHTML = ("Bonjour"); 
-    } else if (heure == 17) {
+    } 
+    else if (hours == 17) {
         if (minutes < 30) {
             target.innerHTML = ("bonjour");
-        } else if (minutes >= 30) {
+        } 
+        else if (minutes >= 30) {
             target.innerHTML = ("Bonsoir");
         }
     } else {

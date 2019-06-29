@@ -1,9 +1,8 @@
 
 // 05-arrays/11-dedupe-array/script.js - 5.11: dédoublonnement d'un tableau
 
-let go = document.getElementById("run");
-
-go.addEventListener("click", function (el) {
+let list = document.getElementById("run");
+list.addEventListener("click", function () {
     const fruits = [
         "cerise",
         "durian",
@@ -20,6 +19,9 @@ go.addEventListener("click", function (el) {
         "raisin",
         "cerise",
     ];
-    let unique = [...new Set(fruits)];
-    console.log(unique);
+    document.getElementById('run').addEventListener('click', () => {
+        const newTable = new Set (fruits);
+        Array.from(newTable);
+        console.log(newTable);
+    })
 })

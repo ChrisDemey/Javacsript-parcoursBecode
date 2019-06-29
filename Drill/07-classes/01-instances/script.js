@@ -1,24 +1,15 @@
 // 07-classes/01-instances/script.js - 7.1: instances
 
-let go = document.getElementById("run"); //créer variable "go" + l'associrer a l'id "run"
 
-go.addEventListener("click", function (el) { //créer un évènement lié a la variable "go" (lors d'un click) et en faire une fonction
-    class Person {
-        constructor(prenom, nom, age) {
-            this.prenom = prenom;
-            this.nom = nom;
-            this.age = 0;
-        }
-        getName() {
-            return this.prenom + " " + this.nom;
-        }
-        setAge(year) {
-            this.age = 2019 - year;
-        }
+
+class Cat {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
     }
-
-    const skitty = new Person ("skitty" , "9ans");
-    const pixel = new Person ("Pixel", "6ans");
-    console.log(skitty);
-    console.log(pixel);
+}
+document.getElementById("run").addEventListener("click", () => {
+    let sCat = new Cat("Skitty", 9);    // variable qui prend ses valeurs et en fait une classe
+    let pCat = new Cat("Pixel", 6);     // variable qui prend ses valeurs et en fait une autre classe
+    console.log(sCat, pCat);            // afficher les 2 variables qui sont devenues des classes (grace a la clase Cat)
 })

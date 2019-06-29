@@ -1,10 +1,9 @@
 //05-arrays/14-bird-names-generator/script.js - 5.14: générateur de noms d'oiseau
 
-let go = document.getElementById("run");
-
-go.addEventListener("click", function (el) {
-    const birds = [
-        {name: "mouette", fem: true},
+let list = document.getElementById("run");
+list.addEventListener("click", function () {
+    const birdsList = [
+        {name: "mouette", fem: true},               // fem pour femelle et trur y est associé
         {name: "corbeau"},
         {name: "mésange", fem: true},
         {name: "hibou"},
@@ -17,7 +16,7 @@ go.addEventListener("click", function (el) {
         {name: "tourterelle", fem: true},
         {name: "corneille", fem: true},
     ];
-    const adjectives = [
+    const birdsData = [
         "cendré",
         "huppé",
         "chantant",
@@ -30,12 +29,14 @@ go.addEventListener("click", function (el) {
         "tangent",
         "arboré",
     ];
-    let random = birds[Math.floor(Math.random()*birds.length)]
-    let random2 = adjectives[Math.floor(Math.random()*adjectives.length)]
+
+    let random = birdsList[Math.floor(Math.random()*birdsList.length)]                  // affiche un caractère aléatoire de l'array birdsList
+    let random2 = birdsData[Math.floor(Math.random()*birdsData.length)]                 // affiche un caractère aléatoire de l'array birdsData
     
-    if (random.hasOwnProperty('fem')){
-        document.getElementById("target").innerHTML = (random.name+" "+random2+"e")
-    } else{
-        document.getElementById("target").innerHTML = (random.name+" "+ random2)
+    if (random.hasOwnProperty('fem')){                                                  // si le caractère aléatoire a le pararmètre fem
+        document.getElementById("target").innerHTML = (random.name+" "+random2+"e")     // chercher l'id target, changer son HTML et ajouter "e" a la fin du 2e caractère (birdsData)
+    }  
+    else{                                                                               
+        document.getElementById("target").innerHTML = (random.name+" "+ random2)        // sinon chercher l'id, changer son HTML pour afficher l'oiseau et son adjectif (au masculin)
     }
 })

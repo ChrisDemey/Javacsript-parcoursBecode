@@ -1,7 +1,7 @@
 // 05-arrays/08-array-includes/script.js - 5.8: présence dans un tableau
 
-let go = document.getElementById("run");
-go.addEventListener("click", function (el) {
+let list = document.getElementById("run");
+list.addEventListener("click", function () {
     const fruits = [
         "pomme",
         "poire",
@@ -16,14 +16,14 @@ go.addEventListener("click", function (el) {
         "raisin",
         "cerise",
     ];
-
     for (i = 0; i < fruits.length; i++) {
         if (fruits[i] == "pomme") {
             console.log("oui");
-            break;
-        } else {
+        break;
+        } 
+        else {
             console.log("non");
-            break;
+        break;
         }
     }
 })

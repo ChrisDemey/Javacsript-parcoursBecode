@@ -11,7 +11,7 @@
 
 let message = prompt("Voulez-vous du gâteau ?");
 if (message == `oui`){
-    alert (`félicitations`)
+    alert (`Très bon choix!`)
 }
 else{
     alert (`Du gâteau ça ne se refuse pas!!`)

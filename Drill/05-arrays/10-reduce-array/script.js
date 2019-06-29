@@ -1,9 +1,9 @@
 
 // 05-arrays/10-reduce-array/script.js - 5.10: utilisation d'un reducer
 
-let go = document.getElementById("run");
-go.addEventListener("click", function (el) {
-    const people = [{firstname: "Grenville", lastname: "Stive", age: 64},
+let list = document.getElementById("run");
+list.addEventListener("click", function (el) {
+    const names = [{firstname: "Grenville", lastname: "Stive", age: 64},
                     {firstname: "Luis", lastname: "Jedrzejewsky", age: 73},
                     {firstname: "Teodor", lastname: "Warrington", age: 56},
                     {firstname: "Danya", lastname: "Bigby", age: 17},
@@ -18,8 +18,9 @@ go.addEventListener("click", function (el) {
                     {firstname: "Jecho", lastname: "Hawket", age: 87},
                     {firstname: "Lief", lastname: "Blazy", age: 80},
                     {firstname: "Jo-ann", lastname: "Sacase", age: 81}];
-    let total = people.reduce(function (sum, people) {
-        console.log(sum, people)
-        return sum + people.age
-    }, 0)
+
+        document.getElementById("run").addEventListener("click", () => {
+        let sum = names.reduce((a,b) => a + b.age , 0)                      // variable sum = fait un 
+        console.log(sum)
+        })
 })

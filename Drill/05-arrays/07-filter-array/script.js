@@ -1,8 +1,8 @@
 //05-arrays/07-filter-array/script.js - 5.7: filtrer un tableau
 
-let go = document.getElementById("run");
-go.addEventListener("click", function (el) {
-    const people = [{ firstname: "Dreddy", lastname: "Nussgen", age: 70},
+let list = document.getElementById("run");
+list.addEventListener("click", function () {
+    const names = [{ firstname: "Dreddy", lastname: "Nussgen", age: 70},
                     {firstname: "Yves", lastname: "Sear", age: 49},
                     {firstname: "Marcel", lastname: "Cowderay", age: 59},
                     {firstname: "Dag", lastname: "Binnall", age: 31},
@@ -17,7 +17,7 @@ go.addEventListener("click", function (el) {
                     {firstname: "Madelene", lastname: "Davie", age: 14},
                     {firstname: "Bent", lastname: "Karpe", age: 82},
                     {firstname: "Reinaldo", lastname: "Grimbleby", age: 81}];
-    let tab = people.map(function (element) {
+    let otherNames = names.map(function (element) {
         if (element.age > 18) {
             console.log(element)
         }

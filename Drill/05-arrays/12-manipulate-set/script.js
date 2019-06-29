@@ -1,8 +1,7 @@
 // 05-arrays/12-manipulate-set/script.js - 5.12: manipulation d'un Set
 
-let go = document.getElementById("run");
-
-go.addEventListener("click", function (el) {
+let list = document.getElementById("run");
+list.addEventListener("click", function () {
     const fruits = new Set([
         "pomme",
         "poire",
@@ -15,9 +14,7 @@ go.addEventListener("click", function (el) {
         "raisin",
         "cerise",
     ]);
-    fruits.delete("pomme");
-    fruits.delete("cerise");
-    fruits.add("banane");
-    fruits.add("kiwi");
+    fruits.delete("pomme"); fruits.delete("cerise");    // effacer pomme et cerise de l'array
+    fruits.add("banane"); fruits.add("kiwi");           // ajouter banane et kiwi à la fin de l'array
     console.log(fruits);
 })

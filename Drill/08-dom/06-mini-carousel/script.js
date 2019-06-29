@@ -8,10 +8,17 @@ const gallery = [
     "../../_shared/img/map.svg",
 ];
 
-let img = document.querySelector("img");
-let imgSrc = img.getAttribute('src');
-let next = document.getElementById("next");
-next.addEventListener("click", function (el) {
-    let random = gallery[Math.floor(Math.random() * gallery.length)]
-    img.setAttribute('src', random);
+let i = 0;
+
+function changeIcon() {
+    document.querySelector("img").src = gallery[i];     // chercher l'élément img, précisément l'élément src
+    if (i < gallery.length - 1) {                       // condition avec boucle dedans, sur la longueur de toutes les images
+        i++;
+    } 
+    else {                                              // sinon
+        i = 0;                                          // la variable vaut 0
+    }
+}
+document.getElementById("next").addEventListener("click", () => {   // chercher l'élément next et y ajouter un évènement au click
+    changeIcon();                                                   // appeler la fonction changeIcon
 })

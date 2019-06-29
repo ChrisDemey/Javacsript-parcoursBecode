@@ -3,11 +3,11 @@
 let doc = document.querySelector("target")
 function heure() {
     let date = new Date();
-    let heure = date.getHours();
-    let minutes = date.getMinutes();
-    if (heure < 18) {
+    let hours = date.getHours();
+    if (hours < 18) {
         target.innerHTML = ("Bonjour");
-    } else {
+    } 
+    else {
         target.innerHTML = ("Bonsoir");
     }
 }
