@@ -2,4 +2,4 @@
 
 ////////// Fais avec l'aide de Ludovic Lambinon-Mortier //////////
 
-///// Nous n'avons pas trouvé la bonne solution /////
+///// Bloqué exercice 10.7 donc pas possible de faire les 10.8 et 10.9 /////

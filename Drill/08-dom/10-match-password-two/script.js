@@ -1,5 +1,7 @@
 // 08-dom/10-match-password-two/script.js - 8.10: vérification de mots de passe (2)
 
+///// Refait durant la journée de consolidation du 27/06 /////
+
 const caseOne = document.getElementById("pass-one");
 const caseTwo = document.getElementById("pass-two");
 

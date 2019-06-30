@@ -1,5 +1,7 @@
 // 08-dom/07-generate-table-one/script.js - 8.7: génération d'un tableau (1)
 
+///// Refait durant la journée de consolidation du 27/06 /////
+
 let target = document.getElementById("target");             // chercher l'ID target
 let tab = '';                                               // variable vide
 let rows = 10;                                              // rows avec valeur 10

@@ -1,5 +1,7 @@
 // 08-dom/06-mini-carousel/script.js - 8.6: mini carousel
 
+///// Refait durant la journée de consolidation du 27/06 /////
+
 const gallery = [
     "../../_shared/img/bell.svg",
     "../../_shared/img/clock.svg",

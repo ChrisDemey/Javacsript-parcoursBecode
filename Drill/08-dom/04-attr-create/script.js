@@ -1,5 +1,7 @@
 // 08-dom/04-attr-create/script.js - 8.4: manipulation d'attributs & création d'élément
 
+///// Refait durant la journée de consolidation du 27/06 /////
+
 let value = document.getElementById("source");      // chercher l'ID source
 let image = document.createElement("img");          // créer élément img (balise html)
 let target = document.getElementById("target");     // chercher l'ID target

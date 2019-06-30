@@ -1,6 +1,6 @@
 // 08-dom/11-change-event-input-one/script.js - 8.11: événement change (1)
 
-////////// Fais avec l'aide de Maxim Lopez, mais nous (en tout cas JE) n'arrivons pas à faire en sorte que le premier caractère entré soit pris en compte //////////
+///// Refait durant la journée de consolidation du 27/06 /////
 
 ///// Possibilités de simplifier le code ? /////
 
@@ -14,7 +14,7 @@ password.addEventListener("keypress", (event) => {      // ajouter évènement a
         event.preventDefault();                         // appeler méthode preventDefault, en gros ca stop la prise de nouveaux caractères
     }
 })
-password.addEventListener("keyup", (event) => {         // ajouter évènement a password avec une interface event
+password.addEventListener("keyup", () => {         // ajouter évènement a password avec une interface event
     entry = password.value.length;                      // entry vaut la longueur des valeurs de password
     count.innerText = `${length}/10`;                   // count et innerHTML change le html pour mettre le nombre de caractères entrés sur 10 (Ex: 0/10, 1/10, 2/10, ...)
 })
